@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Edulink</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/mobileindex.css">
+
+</head>
+
+<body>
+
+<!-- HEADER  -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">🎓</span> <span class="logo-text white">Edulink</span></div>
+<div class="menu-toggle">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<ul class="nav-links">
+
+<li><a href="#">Home</a></li>
+<li><a href="#">Find Teachers</a></li>
+<li><a href="#">Subjects</a></li>
+<!-- Guest menu in mobile-->
+<li class="mobile-auth">
+<a href="pages/login.html" class="login-btn">Login</a>
+<a href="pages/register.html" class="signup-btn white">Signup</a>
+</li>
+
+</ul>
+<!-- Guest menu -->
+<div id="guest-menu" class="auth-buttons">
+<a href="pages/login.html" class="login-btn">Login</a>
+<a href="pages/register.html" class="signup-btn">Signup</a>
+</div>
+
+<!-- Logged in menu -->
+<div id="user-menu" class="profile-menu">
+
+<div class="profile-trigger">
+
+<img src="images/edulink.png" class="avatar">
+
+
+
+<span id="arrow" class="arrow size">go to profile</span>
+
+</div>
+
+<div  id="dropdown" class="dropdown">
+
+<a href="./pages/account.html">Profile</a>
+
+<a href="dashboard.html">Dashboard</a>
+
+<button id="logout-btn" class="logout-btn">Logout</button>
+
+</div>
+
+</div>
+
+</nav>
+
+</header>
+
+<!-- ================= HERO + SEARCH ================= -->
+
+<section class="hero">
+<div class="scale">
+<h1>
+<span class="typed-wrapper">
+<span id="element"></span>
+</span>
+</h1>
+<h2>||  Near You  ||</h2>
+
+<p>Learn from experienced teachers in your city</p>
+
+<div id="search-box">
+
+<input  id="search-subject" type="text" placeholder="Subject">
+
+<input id="search-location" type="text" placeholder="City">
+
+<input id="search-name" type="text" placeholder="Name">
+
+<button id="search">Search</button>
+</div>
+</div>
+<div class="image-stack">
+
+    <img src="./images/layer.png" class="img img1">
+
+    <img src="./images/layer.png" class="img img2">
+
+    <img src="./images/layer.png" class="img img3">
+
+    
+
+</div>
+
+
+
+</section>
+<!-- ================= SEARCH RESULTS ================= -->
+
+<section id="search-results">
+
+<h2>Search Results</h2>
+
+<div class="teacher-container">
+
+<!-- JS will insert teacher cards here -->
+
+</div>
+
+</section>
+<div class="teachercont">
+<div class="feed-header">
+  <span class="brand">FEED</span>
+  <span class="divider">|</span>
+  <span class="sub-text">Top Teachers</span>
+</div>
+<div class="top-teachers">
+    <div class="teachers-card">
+        <div class="teachers-image"><img src="images/demo.png" alt=""></div>
+        <div class="teacher-name">HK Patel</div>
+        <div class="teachers-subject">Mathematics</div>
+        <div class="teachers-experience">10 Years</div>
+        <div class="rating"> ⭐ 4.5 Rating</div>
+
+    </div>
+    <div class="teachers-card">
+        <div class="teachers-image"><img src="images/demo.png" alt=""></div>
+        <div class="teacher-name">HK Patel</div>
+        <div class="teachers-subject">Mathematics</div>
+        <div class="teachers-experience">10 Years</div>
+        <div class="rating"> ⭐ 4.5 Rating</div>
+
+    </div>
+    <div class="teachers-card">
+        <div class="teachers-image"><img src="images/demo.png" alt=""></div>
+        <div class="teacher-name">HK Patel</div>
+        <div class="teachers-subject">Mathematics</div>
+        <div class="teachers-experience">10 Years</div>
+        <div class="rating"> ⭐ 4.5 Rating</div>
+
+    </div>
+    
+</div>
+</div>
+<div class="Gsab">
+    <div class="number">
+        <div class="pic"><img src="images/search.png" alt=""></div>
+        <div class="nodata">
+        <span class="totalteacher">
+            <h2>1000+</h2>
+            <h3>Teachers</h3>
+        </span>
+        <span class="totalstudent">
+            <h2>20000+</h2>
+            <h3>Students</h3>
+        </span>
+        </div>
+        <div class="Pic"><img src="images/search.png" alt=""></div>
+    </div>
+    <div class="picture"><img src="images/main.png" alt=""></div>
+    <div class="data">
+        <div class="dataheader"><h2>🎓 Simple & Professional</h2></div>
+        <div class="c"><p>Find the Right Teacher, Right Away,created by ankush.</p>
+        <p>Connecting Students with Great Teachers.</p>
+        <p>Your Gateway to Better Learning,stay safe and keep learning.</p>
+        </div>
+    </div>
+</div>
+<div class="getstarted"><a href="./pages/register.html"><button id="getstarted">get started ⟶ </button></a></div>
+
+
+
+
+
+
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section class="how-it-works">
+
+<h2>How Edulink Works ?</h2>
+<div class="swiper">
+<div class="swiper-wrapper">
+    <div class="swiper-slide step-card">
+        <div class="image"><img src="images/search.png" alt=""></div>
+       <div class="step green"><h1>1</h1></div>
+        <div class="text green">
+<div class="step-icon">🔎</div>
+<h3>Search Subject</h3>
+<p>Find teachers for the subject you want to learn.</p>
+</div>
+</div>
+
+<div class="swiper-slide step-card">
+    <div class="image"><img src="images/chooseteacher.png" alt=""></div>
+    <div class="step magenta"><h1>2</h1></div>
+    <div class="text magenta">
+<div class="step-icon">👨‍🏫</div>
+<h3>Choose Teacher</h3>
+<p>Compare teachers based on rating and experience.</p>
+</div>
+</div>
+
+<div class="swiper-slide step-card">
+    <div class="image"><img src="images/democlass.png" alt=""></div>
+    <div class="step blue"><h1>3</h1></div>
+    <div class="text blue">
+<div class="step-icon">📅</div>
+<h3>Book Demo Class</h3>
+<p>Schedule a free demo class with the teacher.</p>
+</div>
+</div>
+
+<div class="swiper-slide step-card">
+    <div class="image"><img src="images/keepstudy.png" alt=""></div>
+    <div class="step violet"><h1>4</h1></div>
+    <div class="text violet">
+<div class="step-icon">🎓</div>
+<h3>Start Learning</h3>
+<p>Begin your learning journey and improve your skills.</p>
+</div>
+</div>
+</div>
+<div class="swiper-pagination"></div>
+</div>
+
+
+
+
+</section>
+
+<!-- ================= POPULAR SUBJECTS ================= -->
+
+<section class="subjects">
+
+<h2>Popular Subjects</h2>
+
+<div class="subject-grid">
+
+<div class="subject">Math</div>
+<div class="subject">Physics</div>
+<div class="subject">Chemistry</div>
+<div class="subject">Biology</div>
+<div class="subject">English</div>
+<div class="subject">Computer Science</div>
+
+</div>
+
+</section>
+
+<!-- ================= FEATURED TEACHERS ================= -->
+
+<section class="registertutor scale">
+
+
+<div class="teacher-photo"><img src="./images/becometeacher.png" alt=""></div>
+
+<div class="teacher-content">
+<h1>Become a teacher</h1>
+<p>share your knowledge with students and eaen money. sinup to start your teachers journy now with Tutionwala.</p>
+<ul>
+    <li>Find new students </li>
+    <li>Grow your buisness </li>
+    <li>earn money with Tutionwala </li>
+    <li>Get paid secureley </li>
+</ul>
+<a href="./pages/register.html"><button id="becametutor-btn">Became a tutor ⟶</button></a>
+
+
+
+
+
+</div>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about">
+    <h1>Your Journey, Our Vision, Your Future</h1>
+
+<h2>Our Founders Story: From Passion to Platform</h2>
+<div class="abouT"  >
+
+   
+    <div class="aboutcontent">
+        <h1>Why We Started: A Vision for Accessible Excellence</h1>
+        <p>"Tuition Wala" began with a simple but powerful realization. As educators with years of classroom experience, we saw firsthand how the conventional, one-size-fits-all classroom model too often left students behind. Some students needed more time to grasp foundational concepts, while others needed to be challenged beyond the standard curriculum. But in a room of forty, those individual needs are hard to meet.</p>
+
+
+       <p> We started with a mission: to create a space where individualized attention isn't a luxury, but a standard. For us, "Tuition Wala" isn't just a tuition service; it’s a platform built on the belief that every student has an untapped potential that just needs the right mentorship to flourish. Our journey began small, with a few dedicated students, but the transformations we witnessed—both in grades and in confidence—fueled our ambition. We didn’t just want to create tutors; we wanted to create mentors who could inspire. Our personal passion for teaching is the bedrock on which "Tuition Wala" stands, and we bring that same dedication to every student who walks through our doors.</p>
+    </div>
+    <div class="founderimage"> <img src="./images/myimage.png" alt=""></div>
+</div>
+<div class="abouT">
+    <div class="aboutimage2 "> <img src="./images/about2.png" alt=""></div>
+     <div class="aboutcontent">
+        <h1>Beyond the Syllabus: Cultivating a Lifelong Love for Learning</h1>
+        <p>We don't believe in just helping students memorize answers for the next test. At "Tuition Wala," our method is built on deeper, conceptual understanding. We focus on the 'Why' and the 'How,' not just the 'What.'</p>
+        <p>Our unique approach begins with a comprehensive diagnostic assessment for every student. We don’t start with the current syllabus; we start by identifying foundational gaps. Our mentors then craft a customized learning path. In our small-group settings, we foster a collaborative environment where students are encouraged to ask difficult questions, debate concepts, and take intellectual risks. We teach critical thinking and problem-solving strategies that apply across all subjects. More importantly, we aim to build academic confidence, transforming the way a student views themselves and their capabilities. It’s not just about a temporary grade boost; it’s about equipping them with a toolkit for academic independence and a genuine curiosity that will serve them long after their time with us is over.</p>
+     </div>
+    
+</div>
+<div class="abouT">
+    
+     <div class="aboutcontent">
+        <h1>Our Mission & Results: Empowering a Generation</h1>
+        <p>At "Edulink," we are more than just a tuition center; we are the engine of a new educational ecosystem. Our mission is to democratize high-quality, personalized mentorship by directly connecting ambitious students with a global network of top-tier educators.</p>
+        <p>We have built a dynamic marketplace where students and parents gain exclusive access to curated lists of top courses from verified, leading teachers in every field. More importantly, we place the power in your hands. Through our platform, students can post their specific home tuition or online tuition requirements—defining their subject, level, schedule, and learning style. Any qualified teacher in our network who fits the profile can view and accept the requirement, fostering a perfectly aligned, efficient, and successful educational match. This isn’t just about improving test scores; it’s about providing students with an accessible toolkit for academic independence and giving them the confidence that the perfect mentor is always within reach. We are cultivating a generation of self-sufficient learners and connecting them with the futures they deserve.</p>
+     </div>
+     <div class="aboutimage"> <img src="./images/about2.png" alt=""></div>
+</div>
+
+
+
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+
+<section class="testimonials">
+
+<h2>What Students Say</h2>
+
+<div class="testimonial-card">
+
+<p>
+
+⭐ ⭐ ⭐ ⭐ ⭐
+
+"Edulink helped me find a great physics teacher
+within a day."
+
+</p>
+
+<h4>— Ankush Tiwari</h4>
+
+</div>
+
+</section>
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+<h2>Ready to Start Learning?</h2>
+
+<p>Find the best teachers in your city today.</p>
+
+<a href="#search-box"><button>Search Teachers</button></a>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="footer-container">
+
+<div>
+
+<h3>Edulink</h3>
+
+<p>Connecting students with great teachers.</p>
+
+</div>
+
+<div>
+
+<h4>Quick Links</h4>
+
+<ul>
+<li>Home</li>
+<li>Find Teachers</li>
+<li>Subjects</li>
+<li>About</li>
+</ul>
+
+</div>
+
+<div>
+
+<h4>Contact</h4>
+
+<p>Email: support@tuitionwala.com</p>
+
+<p>Phone: +91 9876543210</p>
+
+</div>
+
+</div>
+
+<p class="copyright">
+
+© 2026 Edulink
+
+</p>
+
+</footer>
+<div id="teacher-modal" class="modal">
+  <div class="modal-content">
+
+    <span id="close-modal">&times;</span>
+
+    <div id="modal-body">
+      <!-- Dynamic content will come here -->
+    </div>
+
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<script src="./javascript/index.js"></script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+    var typed = new Typed('#element', {
+      strings: ['Find the Best Teachers', 'Post tuition requirement','connect to  best teachers','Start studying and rock','Find the Best Teachers' ],
+      typeSpeed: 20,
+    });
+  </script> 
+</body>
+
+</html>

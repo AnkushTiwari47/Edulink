@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - TutionWala</title>
+    <link rel="stylesheet" href="../css/login.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-card">
+
+            <!-- Logo -->
+            <div class="logo">
+                <img src="../images/image.png" alt="TutionWala Logo">
+            </div>
+
+            <h2>Login to TutionWala</h2>
+
+            <!-- Form -->
+            <form>
+                <div  class="input-box">
+                    <i class="fas fa-envelope"></i>
+                    <input id="loginEmail" type="email" placeholder="Enter your email" required>
+                </div>
+
+                <div  class="input-box">
+                    <i class="fas fa-lock"></i>
+                    <input id="loginPassword" type="password" placeholder="Enter your password" required>
+                </div>
+
+                <button  id="login-btn" class="login-btn">Login</button>
+            </form>
+
+            <p class="signup-text">
+                Don't have an account? <a href="register.html">Signup</a>
+            </p>
+
+        </div>
+    </div>
+<script src="../javascript/login.js"></script>
+</body>
+</html>

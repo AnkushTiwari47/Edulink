@@ -1,0 +1,131 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 80px;
+}
+
+/* Container */
+.container {
+  width: 380px;
+  margin-top: 25px;
+  padding: 30px;
+  border-radius: 10px;
+  background: #d0c7c7;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+#m{
+    display: flex;
+    flex-direction: column;
+    column-gap: 15px;
+    
+    justify-content: center;
+}
+
+/* Dropdown */
+#role {
+    margin-left: 0px;
+   margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  
+}
+
+/* Form sections */
+.form-box {
+  display: flex;
+  flex-direction: column;
+  
+  gap: 15px;
+}
+
+/* Input Box */
+.input-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px;
+  background: #fff;
+  transition: 0.3s;
+ 
+  
+}
+.input-box {
+  margin-bottom: 10px;  /* 🔥 forces visible gap */
+}
+
+/* Icon */
+.icon {
+  font-size: 18px;
+  margin-right: 10px;
+  color: #555;
+}
+
+/* Input */
+.placeholder {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 15px;
+  background: transparent;
+}
+
+/* Hover */
+.input-box:hover {
+  border-color: #667eea;
+}
+
+/* Focus */
+.input-box:focus-within {
+  border-color: #667eea;
+  box-shadow: 0 0 5px rgba(102,126,234,0.4);
+}
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Main Title */
+.header h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+/* Icon */
+.logo {
+  font-size: 28px;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 14px;
+  color: #060c4e;
+  margin-top: 5px;
+}
+.submit_register{
+    color: #ffffff;
+    background-color: rgb(4, 137, 42);
+    padding: 10px;
+    border-radius: 8px;
+    margin-left: 0px;
+    margin-top: 30px;
+    width: 150px;
+}

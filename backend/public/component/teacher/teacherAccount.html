@@ -1,0 +1,145 @@
+<aside class="sidebar dropdown">
+            <div class="logo">
+                <i class="fas fa-graduation-cap white"></i>
+                <span class="white">Edulink</span>
+            </div>
+            <nav class="menu">
+                <li class="li" id="homePage"><a href="../../index.html">🏠    home</a></li>
+                <li class="li" id="chat-connection"><a href="#"><span class="icon">💬</span> chat section</a></li>
+               <li>  <a  class="li"href="#" class="active" id="dashboard"><i class="fas fa-th-large"></i> Dashboard</a></li>
+                <li><a  class="li" href="#" id="Edit-Profile"><i class="far fa-user"></i> Edit Profile</a></li>
+               <li> <a class="li" href="#" id="your-students"><i class="fas fa-users"></i> Your Students</a></li>
+               <li> <a  class="li" href="#" id="Your-post"><i class="far fa-folder"></i> Post</a></li>
+               <li> <a class="li" href="#" id="helpandsupport"><i class="far fa-question-circle"></i> Help & Support</a></li>
+            </nav>
+            <div class="logout" id="logout">
+                <a href="#"><i class="fas fa-arrow-right-from-bracket"></i> Logout</a>
+            </div>
+        </aside>
+<button id="hamberg" class="hamberg">&#9776;</button>
+        <main class="main-content" id="main-content">
+            <header class="header">
+                <div class="profile-info" id="profile-info">
+                    <img  id="profile-pic" src="https://via.placeholder.com/60" alt="Aisha" class="avatar">
+                    <div class="welcome-text">
+                        <h1>Welcome Back, <span id="greetname">Aisha Sharma!</span></h1>
+                        <p>Tuition Wala Teacher's Hub</p>
+                    </div>
+                </div>
+                <div class="profile-stats">
+                    <div class="toggle-container">
+                        <span>Accepting New Students</span>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="strength-container">
+                        <div class="strength-labels">
+                            <span>Profile Strength: 85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-grid">
+                <section class="card">
+                    <h3>Active Students (Quick Access)</h3>
+                    <p class="subtitle">Active Students</p>
+                    <div class="student-avatars">
+                        <img src="https://via.placeholder.com/50" alt="Student">
+                        <img src="https://via.placeholder.com/50" alt="Student">
+                        <img src="https://via.placeholder.com/50" alt="Student">
+                        <img src="https://via.placeholder.com/50" alt="Student">
+                    </div>
+                    <div class="schedule-info">
+                        <p><strong>Sanjay P.</strong> - Physics: Today, 4PM</p>
+                        <p><strong>Saan K.</strong></p>
+                        <p><strong>Rahul K.</strong> - Math: Wed, 11AM</p>
+                        <p><strong>Rahul P.</strong> - Physics: Wed, 11AM</p>
+                    </div>
+                    <button class="btn-outline">View All Students</button>
+                </section>
+
+                <section class="card">
+                    <h3>My Tuition Requirements</h3>
+                    <p class="subtitle">Applied Posts</p>
+                    <div class="post-list post-item-container">
+                        <div class="post-item">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <strong>Post 1: Physics Tutor</strong>
+                                <p>Posted: 2 days ago &nbsp; Responses: 4</p>
+                            </div>
+                        </div>
+                        <div class="post-item">
+                            <i class="far fa-comment-alt"></i>
+                            <div>
+                                <strong>Post 2: English Grammar Coach</strong>
+                                <p>Posted: 1 day ago &nbsp; Responses: 2</p>
+                            </div>
+                        </div>
+                        <div class="post-item">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <strong>Post 3: Board Prep Class</strong>
+                                <p>Posted: Just now &nbsp; Responses: 0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-outline">Browse Applied Posts</button>
+                </section>
+
+                <section class="card">
+                    <h3>New Leads & Inquiries</h3>
+                    <p class="subtitle">New Inquiries</p>
+                    <div class="lead-item">
+                        <span><strong>Aisha S.</strong> - Calculus</span>
+                        <button class="btn-action">Mark as Read</button>
+                    </div>
+                    <div class="lead-item">
+                        <span><strong>David C.</strong> - Python</span>
+                        <button class="btn-action">Reply</button>
+                    </div>
+                    <div class="lead-item">
+                        <span><strong>David K.</strong> - Calculus</span>
+                        <button class="btn-action">Reply</button>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <h3>Earnings Overview (Private)</h3>
+                    <p class="subtitle">Your Earnings</p>
+                    <div class="earnings-row">
+                        <span>Pending:</span>
+                        <strong>₹4,500</strong>
+                    </div>
+                    <div class="earnings-row">
+                        <span>Cleared:</span>
+                        <strong>₹12,000</strong>
+                    </div>
+                    <button class="btn-outline">View Payment History</button>
+                </section>
+            </div>
+        </main>
+        <div id="post-view-overlay" class="post-view-overlay">
+
+    <div class="post-view-card">
+
+        <button class="close-view">✖</button>
+
+        <h2 id="view-objective"></h2>
+
+        <p id="view-content"></p>
+
+        <div class="view-actions">
+            <button class="edit-post-btn " id="connect">connect</button>
+            
+        </div>
+
+    </div>
+
+</div>

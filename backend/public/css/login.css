@@ -1,0 +1,92 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Body */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+}
+
+/* Container */
+.login-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card */
+.login-card {
+    background: white;
+    padding: 30px;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+/* Logo */
+.logo img {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/* Heading */
+.login-card h2 {
+    margin-bottom: 20px;
+}
+
+/* Input box */
+.input-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.input-box i {
+    margin-right: 10px;
+    color: #4facfe;
+}
+
+.input-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+/* Button */
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #4facfe;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background: #00c6ff;
+}
+
+/* Signup text */
+.signup-text {
+    margin-top: 15px;
+}
+
+.signup-text a {
+    color: #4facfe;
+    text-decoration: none;
+}

@@ -1,0 +1,1255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 240px;
+    background-color: #2c3e8c;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    padding: 0 20px 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu {
+    flex-grow: 1;
+}
+
+.menu a, .logout a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    color: #cbd5e0;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu a:hover, .menu a.active {
+    background-color: white;
+    color: black;
+}
+
+
+
+/* Main Content Styles */
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.profile-info {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.avatar {
+     width: 100px;
+    height: 100px;;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #2c3e8c;
+}
+
+.welcome-text h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.welcome-text h1 span {
+    color: #6b46c1;
+}
+
+.welcome-text p {
+    color: #666;
+    font-size: 14px;
+}
+
+.profile-stats {
+    text-align: right;
+    width: 250px;
+}
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #2c3e8c;
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    background: #fffdf5; /* Creamy color from image */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+/* Card Specifics */
+.student-avatars {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.student-avatars img {
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.schedule-info p {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+.post-item-container{
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.post-item {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 15px;
+     
+}
+
+.post-item i {
+    color: #2c3e8c;
+    font-size: 18px;
+}
+
+.post-item p {
+    font-size: 12px;
+    color: #777;
+}
+
+.lead-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.earnings-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* Buttons */
+.btn-outline {
+    margin-top: auto;
+    background: transparent;
+    border: 1px solid #2c3e8c;
+    color: #2c3e8c;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    align-self: center;
+    font-weight: 500;
+}
+
+.btn-action {
+    background: #edf2f7;
+    border: 1px solid #cbd5e0;
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* Switch Toggle CSS */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input { opacity: 0; width: 0; height: 0; }
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px; width: 14px;
+  left: 3px; bottom: 3px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider { background-color: #48bb78; }
+input:checked + .slider:before { transform: translateX(20px); }
+.slider.round { border-radius: 34px; }
+.slider.round:before { border-radius: 50%; }
+/*============css for edit profile================*/
+:root {
+    --primary-color: #0d2142;
+    --secondary-color: #f0f2f5;
+    --text-muted: #65676b;
+    --border-color: #dddfe2;
+    --white: #ffffff;
+}
+.profile-container {
+    background:  rgb(230, 223, 209);
+    width: 100%;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 30px;
+    border: 5px solid rgb(254, 254, 254);
+  
+}
+
+h2 { color: rgb(6, 6, 6); margin-bottom: 25px; font-weight: 600; }
+h3 { font-size: 14px; text-transform: uppercase; color: #444; margin: 20px 0 15px 0; letter-spacing: 0.5px; }
+
+.profile-form{
+    background-color: rgb(245, 235, 214);
+    border: 5px solid rgb(253, 252, 252);
+    
+}
+/* Photo Section */
+.photo-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+   
+}
+
+.photo-preview {
+    position: relative;
+    width: 100px;
+    height: 100px;
+     background-color:wheat;
+     border-radius: 50%;
+      border: 4px solid white;
+}
+
+.photo-preview img {
+   
+    width: 100%;
+    height: 100%;
+   border-radius: 50%;
+    object-fit: cover;
+   
+}
+
+.camera-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    background: rgb(137, 124, 124);
+    padding: 4px;
+    border-radius: 50%;
+    font-size: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Form Styles */
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 200px;
+    
+}
+
+
+.form-group.small { flex: 0.3; }
+.form-group.grow { flex: 1.5; }
+
+label {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #090808;
+}
+
+input, select, textarea {
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 14px;
+    background: #fafafa;
+    
+}
+
+.input-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-with-icon input { width: 100%; padding-right: 35px; }
+.input-with-icon i {
+    position: absolute;
+    right: 12px;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* Tag style for subjects */
+.tag-input {
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+    background: #f0f2f5;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+.tag-input span {
+    background: #e4e6eb;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.char-limit {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-align: right;
+    margin-top: 4px;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+    border: none;
+    transition: 0.2s;
+}
+.uploadbtn{
+    border: 4px solid white;
+    padding: 10px 24px;
+    border-radius: 12px;
+    color: white;
+    background-color:  #e87350;
+}
+.uploadbtn:hover{
+  background-color: #18449a;
+    color: #f8f8f9;
+      cursor: pointer;
+}
+.btn:hover{
+    border: 4px solid white;
+    background-color: #f1653a;
+    color: #fafafa;
+}
+.btn-primary { background: var(--primary-color); color: white; }
+.btn-link { background: transparent; color: #444;border: 4px solid white; }
+.btn-secondary { background: #e4e6eb; color: #050505; border: 4px solid white;}
+.btn-submit { background: var(--primary-color); color: white; margin-left: auto;border: 4px solid white; }
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 30px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+}
+
+hr { border: 0; border-top: 1px solid #eee; margin: 20px 0; }
+/*==========================================*/
+.chat-page .container{
+    display:flex !important;
+    max-width:none !important;
+    margin:0 !important;
+    padding:0 !important;
+    width:100% !important;
+}
+.edulink-chat-container{
+    width:100% !important;
+    max-width:none !important;
+}
+.teacherchatcontainer{
+    margin-left: 80px;
+    width: 30vw;
+}
+.chat-header-user .avatar{
+width:40px;
+height:40px;
+margin-right:15px;
+}
+
+.profile-info .avatar{
+width:100px;
+height:100px;
+}
+.chat-window .avatar{
+width:40px;
+height:40px;
+}
+.conn-info h2{
+margin:0;
+font-size:16px;
+line-height:1.2;
+}
+.conversation-item .avatar{
+ width:40px;
+height:40px;   
+}
+.white{
+    color: white;
+}
+@media (max-width: 768px) { 
+  .sidebar{
+    display: none;
+  }
+  .hamberg{
+    display: flex;
+} 
+.show{
+    display: flex;
+    z-index: 999;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    margin-bottom: 16px;
+}
+
+/* Navigation button position alignment */
+.hamberg {
+    align-self: flex-start;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.welcome-text h1 {
+    font-size: 1.25rem;
+    margin: 0 0 4px 0;
+}
+
+.welcome-text p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* Header Action Controls (Toggle & Progress Bar) */
+.profile-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 12px;
+}
+
+.toggle-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+/* Switch UI Configuration */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 24px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: .3s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .3s;
+}
+
+input:checked + .slider { background-color: #2ec4b6; }
+input:checked + .slider:before { transform: translateX(22px); }
+.slider.round { border-radius: 24px; }
+.slider.round:before { border-radius: 50%; }
+
+/* Progress bar alignment */
+.strength-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.strength-labels {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: #0d6efd;
+    border-radius: 4px;
+}
+
+
+/* --- Dashboard Grid & Cards --- */
+.dashboard-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Stack layout down sequentially on mobile views */
+}
+
+.card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    border: 1px solid var(--border-color);
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    margin: 0 0 4px 0;
+}
+
+.subtitle {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0 0 16px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+
+/* --- Component Sections Internal Layouts --- */
+
+/* Section 1: Active Students Avatar Overlaps */
+.student-avatars {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.student-avatars img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--bg-card);
+    margin-right: -10px; /* Creates the overlapping group effect */
+}
+
+.schedule-info p {
+    font-size: 0.9rem;
+    margin: 8px 0;
+    padding-bottom: 4px;
+}
+
+/* Section 2: Tuition Requirements Feed */
+.post-item-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.post-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.post-item:last-child {
+    border-bottom: none;
+}
+
+.post-item i {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+    width: 20px;
+    text-align: center;
+}
+
+.post-item strong {
+    font-size: 0.95rem;
+    display: block;
+}
+
+.post-item p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin: 4px 0 0 0;
+}
+
+/* Section 3: Inquiries & Leads List */
+.lead-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.95rem;
+}
+
+.lead-item:last-of-type {
+    border-bottom: none;
+    margin-bottom: 12px;
+}
+
+/* Section 4: Earnings Summary Layout */
+.earnings-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 1rem;
+}
+
+
+/* --- Buttons & UI Elements --- */
+button {
+    font-family: inherit;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Block buttons for native app-like tap targets */
+.btn-outline {
+    width: 100%;
+    background: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    margin-top: 8px;
+    transition: background 0.2s;
+}
+
+.btn-outline:active {
+    background: rgba(13, 110, 253, 0.08);
+}
+
+/* Small contextual inline utility action buttons */
+.btn-action {
+    background: #e9ecef;
+    border: none;
+    color: var(--text-main);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+}
+
+.btn-action:active {
+    background: #dee2e6;
+}
+.profile-container {
+    background: var(--bg-surface);
+    border-radius: 12px;
+    padding: 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.profile-header h2 {
+    font-size: 1.4rem;
+    margin: 0 0 20px 0;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--border-color);
+    margin: 24px 0;
+}
+
+section h3 {
+    font-size: 1.15rem;
+    margin: 0 0 16px 0;
+    color: var(--text-primary);
+}
+
+/* --- Photo Section & Image Upload Elements --- */
+.photo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+}
+
+.photo-preview {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+#avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--border-color);
+}
+
+.camera-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--primary-color);
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.photo-controls .label-text {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+}
+
+.photo-controls .button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+/* Clean approach to hide default browser file input text */
+#photoInput {
+    display: none;
+}
+
+.uploadbtn {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    font-weight: 500;
+    width: 100%;
+    max-width: 200px;
+}
+
+.removebtn {
+    background: transparent;
+    border: none;
+    color: var(--danger-color);
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+
+
+/* --- Form Control Elements --- */
+.form-row {
+    display: flex;
+    flex-direction: column; /* Force data grids to stack natively into 1 column */
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    font-size: 0.95rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background-color: #fff;
+    color: var(--text-primary);
+    font-family: inherit;
+    outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--primary-color);
+}
+
+/* Fixed Textarea configuration */
+textarea {
+    resize: vertical;
+}
+
+.char-limit {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-align: right;
+    margin-top: 2px;
+}
+
+
+/* --- Inline Icon Fields Handling --- */
+.input-with-icon {
+    position: relative;
+    width: 100%;
+}
+
+.input-with-icon input {
+    padding-right: 40px; /* Leave space so text doesn't flow under icons */
+}
+
+.input-with-icon i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    pointer-events: none;
+    font-size: 0.9rem;
+}
+
+
+/* --- Lower Action Triggers (Sticky/Block Behavior) --- */
+.form-actions {
+    display: flex;
+    flex-direction: column-reverse; /* Put "Cancel" below "Save" on small phone frames */
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.btn-submit {
+    background-color: #2ec4b6; /* High contrast CTA color */
+    color: #fff;
+    border-radius: 15px;
+}
+
+.btn-secondary {
+    background-color: #e9ecef;
+    color: var(--text-primary);
+}
+
+.btn:active {
+    opacity: 0.85;
+}
+.main-content{
+    padding: 0px;
+}
+.dropdown{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:60%;
+    height:100vh;
+
+    
+
+    z-index:2000;
+
+    display:flex;
+    flex-direction:column;
+
+    padding-top:90px;
+
+    transition:0.35s ease;
+
+    box-shadow:-5px 0 20px rgba(0,0,0,0.15);
+}
+
+/* active */
+.dropdown.show{
+    right:0px;
+    
+}
+  
+}
+@media screen and (max-width: 768px) {
+    /* 1. Global Structure Fixes */
+    .container#chat--container {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        gap: 20px;
+    }
+
+    /* 2. Navbar Modifications */
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+        height: auto; /* In case a fixed height was set */
+    }
+
+    .nav-left, .nav-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .search-bar {
+        flex-grow: 1;
+        margin-left: 10px;
+    }
+
+    /* 3. Sub-Navigation (Horizontal Scrollable Menu) */
+    .sub-nav ul {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 10px;
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+        gap: 15px;
+    }
+
+    .sub-nav ul::-webkit-scrollbar {
+        display: none; /* Hides scrollbar for a cleaner look */
+    }
+
+    /* 4. Main Hub & Request Cards Grid */
+    .main-hub {
+        width: 100%;
+    }
+
+    .request-grid {
+        display: grid;
+        grid-template-columns: 1fr; /* Force single column on mobile */
+        gap: 15px;
+    }
+
+    .request-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Stack buttons on very small screens if necessary */
+    .card-actions {
+        display: flex;
+        gap: 10px;
+    }
+
+    .card-actions button {
+        flex: 1; /* Makes buttons equal width */
+        padding: 10px;
+    }
+
+    /* 5. Sidebar / Connection List Modifications */
+    .teacherchatcontainer.sidebar-connections {
+        width: 100%;
+        order: 2; /* Pushes the sidebar below the main hub content */
+    }
+
+    .conn-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 0;
+    }
+
+    /* 6. Footer adjustments */
+    .footer {
+        text-align: center;
+        padding: 20px 10px;
+    }
+    .teacherchatcontainer {
+    margin-left: 0px;
+
+}
+}
+@media screen and (max-width: 768px) {
+    /* 1. Container Layout Adjustment */
+    .edulink-chat-container {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    /* Standard State: Sidebar takes up the full screen space */
+    .chat-sidebar {
+        width: 100%;
+        height: 100%;
+        flex-shrink: 0;
+        transition: transform 0.3s ease;
+    }
+
+    /* Standard State: Chat window stays hidden off-screen to the right */
+    .chat-window {
+        width: 100%;
+        height: 100%;
+        flex-shrink: 0;
+        transition: transform 0.3s ease;
+    }
+
+    /* Toggle State: Shifts layout left to bring the chat window into focus */
+    .edulink-chat-container.show-chat .chat-sidebar {
+        transform: translateX(-100%);
+    }
+    
+    .edulink-chat-container.show-chat .chat-window {
+        transform: translateX(-100%);
+    }
+
+
+    /* 4. Chat Header Optimization */
+    .chat-header {
+        padding: 10px 15px;
+        justify-content: space-between;
+    }
+
+    .chat-header-name {
+        font-size: 0.95rem;
+        max-width: 150px; /* Prevents overflow clipping */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Simplify header action buttons on tiny displays */
+    .chat-header-actions .action-btn {
+        padding: 6px 10px;
+        font-size: 0.85rem;
+    }
+    
+    /* Optional: Hide text inside call buttons on very small screens to save space */
+    @media screen and (max-width: 400px) {
+        .chat-header-actions .action-btn {
+            font-size: 0; /* Hides text, leaves icon if present */
+        }
+        .chat-header-actions .action-btn::before {
+            font-size: 1rem; /* Maintains icon size readability */
+        }
+    }
+
+    /* 5. Fluid Message Bubble Area */
+    .message-area {
+        flex: 1;
+        padding: 12px;
+        overflow-y: auto;
+    }
+
+    .message-group {
+        margin-bottom: 15px;
+        gap: 8px; /* Compact spacing */
+    }
+
+    .bubble {
+        max-width: 85%; /* Allows bubbles to occupy more horizontal space on mobile */
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+
+    /* 6. Touch-Friendly Bottom Input Area */
+    .message-input-area {
+        padding: 10px;
+        gap: 8px;
+        background-color: #f9f9f9;
+    }
+
+    .input-actions-left {
+        gap: 5px;
+    }
+
+    .icon-btn {
+        width: 36px;
+        height: 36px; /* Minimum target for easy finger taps */
+        font-size: 1.1rem;
+    }
+
+    .message-input {
+        padding: 10px 12px;
+        font-size: 1rem; /* Prevents iOS from auto-zooming input fields */
+    }
+
+    .send-btn {
+        padding: 0 15px;
+        height: 38px;
+    }
+    
+    .send-btn span {
+        display: inline-block; /* Smooth arrow animation spacing */
+    }
+}
+@media screen and (max-width: 768px) {
+    /* Hide back button by default if needed, or style it for mobile */
+    .chat-header .back-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+        font-size:xx-large ;
+        padding: 5px 10px 5px 0;
+        margin-right: 5px;
+        cursor: pointer;
+        color: #333; /* Adjust to match theme color */
+    }
+
+    /* Adjust alignment header layout to scale gracefully with the new button */
+    .chat-header-user {
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* Base style: Hidden on desktop */
+@media screen and (min-width: 769px) {
+    .chat-header .back-btn {
+        display: none !important;
+    }
+}
