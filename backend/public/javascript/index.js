@@ -227,6 +227,9 @@ document.body.addEventListener("click", function(e) {
     if (!e.target.matches("#arrow")){
       document.getElementById("dropdown").classList.remove("show")
     }  
+    if (e.target.matches(".connect")){
+sendConnectionRequest();
+    }
 });
 const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");

@@ -6,6 +6,7 @@ import jwt from "jsonwebtoken";
 
 export const  createUser = async (req,res)=>{
     try {//hash the password
+      
         const hashedPassword = await bcrypt.hash(req.body.password,10);
         const { name, email, password,role } = req.body;
         //  validation
@@ -18,6 +19,7 @@ export const  createUser = async (req,res)=>{
         if (existingUser) {
             return res.status(400).json({ message: "User already exists" });
         }
+        
         const users= await user.create({
             
             name,
@@ -25,8 +27,10 @@ export const  createUser = async (req,res)=>{
             password:hashedPassword,
             role
         }
+        
 
         );
+        
         if (role ==="Student"){
             const Students = await Student.create({
               studentId:users._id
@@ -44,6 +48,7 @@ export const  createUser = async (req,res)=>{
         res.status(201).json(userWithoutPassword);
         
     } catch (error) {
+      console.log("CREATE ERROR:", error);
         res.status(500).json({message:error.message})
     }
 }

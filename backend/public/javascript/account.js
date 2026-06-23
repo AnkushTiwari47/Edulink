@@ -84,6 +84,7 @@ const sendConnectionRequest =async (receiverId)=>{
     const token=localStorage.getItem("token");
     if(!token){
         alert("Please login first");
+        console.log("login please");
         return
     }
     
@@ -99,7 +100,11 @@ const sendConnectionRequest =async (receiverId)=>{
     console.log(data);
     if (response.ok){
         alert("request sent");
-    }else{alert("request already sent")}
+    }
+    if (response.status === 400) {
+    alert("request already sent");
+    return;
+}else{}
     document.getElementById("post-view-overlay").style.display="none";
 }
 //geting all connection request
@@ -128,7 +133,7 @@ console.log(data);
     data.forEach(p=>{
         html+=`<div class="request-card">
                     <div class="card-header">
-                        <img src="/uploads/profile/${p.sender.photo}" alt="Aisha">
+                        <img src="/uploads/profile/${p.sender.photo}" alt="">
                         <div class="header-text">
                             <strong><h2>${p.sender.name}</h2></strong>
                             <p>Sent: ${timeAgo(p.createdAt)}  &nbsp;&nbsp;</p>
@@ -140,6 +145,8 @@ console.log(data);
                         <button class="btn-decline"data-id="${p._id}">DECLINE</button>
                     </div>
                 </div>`
+                
+                
     })
 document.querySelector(".request-grid").innerHTML=html;
 }
@@ -801,7 +808,7 @@ if(logout){
 logout.addEventListener("click",async()=> {
     localStorage.removeItem("token")
     window.location.href="../index.html"
-alert("loged out!");
+
 });
 }
 if(editBtn){
@@ -852,7 +859,7 @@ if(logout){
 logout.addEventListener("click",async()=> {
     localStorage.removeItem("token")
     window.location.href="../index.html"
-alert("loged out!");
+
 });
 }
 if(editBtn){
