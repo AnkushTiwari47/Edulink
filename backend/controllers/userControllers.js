@@ -7,9 +7,9 @@ import jwt from "jsonwebtoken";
 export const  createUser = async (req,res)=>{
     try {//hash the password
         const hashedPassword = await bcrypt.hash(req.body.password,10);
-        const { userId, name, email, password,role } = req.body;
+        const { name, email, password,role } = req.body;
         //  validation
-        if (!userId || !name || !email || !password) {
+        if ( !name || !email || !password) {
             return res.status(400).json({ message: "All fields are required" });
         }
 
@@ -19,7 +19,7 @@ export const  createUser = async (req,res)=>{
             return res.status(400).json({ message: "User already exists" });
         }
         const users= await user.create({
-            userId,
+            
             name,
             email,
             password:hashedPassword,

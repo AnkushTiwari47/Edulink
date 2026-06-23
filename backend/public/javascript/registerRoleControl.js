@@ -1,6 +1,6 @@
 const submitform = async (e) => {
     e.preventDefault();
-    const ID=document.getElementById("userId").value;
+    
     const student=document.getElementById("studentName").value;
     const teacher=document.getElementById("teacherName").value;
     const studentemail=document.getElementById("studentEmail").value;
@@ -11,33 +11,31 @@ const submitform = async (e) => {
     let userData
     if(document.getElementById("role").value === "Student"){
          //  validation
-        if (!ID ||!  student ||  ! studentemail|| !studntpassword) {
+        if (!  student ||  ! studentemail|| !studntpassword) {
         alert("please fill the required field to proceed")
             return ;
         }
         userData = {
-        userId: ID,
+        
         name: student,
         email: studentemail,
         password: studntpassword,
         role: document.getElementById("role").value,
-        class: document.getElementById("class").value,
-        rollno: document.getElementById("rollNumber").value
+        
     };
     }else{
          //  validation
-        if (!ID ||!  teacher ||  ! teachermail|| !teacherpassword) {
+        if (!  teacher ||  ! teachermail|| !teacherpassword) {
         alert("please fill the required field to proceed")
             return;
         }
        userData = {
-        userId: ID,
+        
         name: teacher,
         email: teachermail,
         password:teacherpassword,
         role: document.getElementById("role").value,
-        subject: document.getElementById("subject").value,
-        salary: document.getElementById("salary").value
+        
     }; 
     }
     try {
@@ -92,18 +90,16 @@ const submitform = async (e) => {
 }
 
     // clear form
-    document.getElementById("userId").value = "";
+    
     document.getElementById("studentName").value = "";
     document.getElementById("studentEmail").value = "";
     document.getElementById("studentPassword").value = "";
     document.getElementById("role").value = "Select Role";
-    document.getElementById("class").value = "";
-    document.getElementById("rollNumber").value = "";
+    
     document.getElementById("teacherName").value="";
     document.getElementById("teacherEmail").value ="";
     document.getElementById("teacherPassword").value ="";
-    document.getElementById("subject").value ="";
-    document.getElementById("salary").value ="";
+    
 };
 
 
