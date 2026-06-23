@@ -24,7 +24,10 @@ app.use("/user", studentRoute);
 app.use("/user", teacherRoute);
 app.use("/connections", connectionRoute);
 app.use("/chat", chatRoutes); 
- 
+ //for health and ping to prevent cold start
+ app.get("/health", (req, res) => {
+    res.status(200).send("OK");
+});
 const server = http.createServer(app);
 
 initSocket(server); 
