@@ -1251,3 +1251,15 @@ textarea {
         display: none !important;
     }
 }
+@media screen and (max-width:768px){
+
+    .show-chat .chat-sidebar{
+        display:none;
+    }
+
+    .show-chat .chat-window{
+        width:100vw;
+        flex:1;
+        transform:none !important;
+    }
+}

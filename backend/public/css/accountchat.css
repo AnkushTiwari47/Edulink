@@ -1028,3 +1028,15 @@ height:100px;
         white-space: nowrap; /* Keeps text inside button on a single line */
     }
 }
+@media screen and (max-width:768px){
+
+    .show-chat .chat-sidebar{
+        display:none;
+    }
+
+    .show-chat .chat-window{
+        width:100vw;
+        flex:1;
+        transform:none !important;
+    }
+}
