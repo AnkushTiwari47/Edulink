@@ -810,7 +810,7 @@ height:100px;
     }
     
     .edulink-chat-container.show-chat .chat-window {
-        transform: translateX(-100%);
+        transform: translateX(-125%);
     }
 
 

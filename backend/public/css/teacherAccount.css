@@ -854,9 +854,7 @@ section h3 {
 }
 
 /* Clean approach to hide default browser file input text */
-#photoInput {
-    display: none;
-}
+
 
 .uploadbtn {
     background-color: var(--primary-color);
@@ -1142,7 +1140,7 @@ textarea {
     }
     
     .edulink-chat-container.show-chat .chat-window {
-        transform: translateX(-100%);
+        transform: translateX(-125%);
     }
 
 
