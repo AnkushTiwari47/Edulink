@@ -1092,7 +1092,8 @@ navItems.forEach(item => {
 // ===============================
 // SOCKET SETUP (RUN ONCE)
 // ===============================
-const socket = io("http://localhost:3000");
+//  CORRECT: Connects to localhost in development, and Render in production
+const socket = io();
 
 const userId = localStorage.getItem("userId");
 
